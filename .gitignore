@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# Secrets (API keys, device tokens)
+.env
+
+# C++ / CMake build output
+build/
+cmake-build-*/
+compile_commands.json
+
+# Models and audio: too large for git, and recordings are private
+models/
+*.gguf
+*.onnx
+*.tflite
+*.wav
+recordings/
+
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store
