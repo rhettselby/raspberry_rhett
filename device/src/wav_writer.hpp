@@ -1,9 +1,9 @@
-// Writes audio to a .wav file as 16-bit PCM, so you can listen to the noise
+// Writes audio to a .wav file as 16-bit PCM, so I can listen to the noise
 // generators and plot their spectrum.
 //
 // This is the project's first RAII wrapper around a C API: a WavWriter owns a
 // FILE* from <cstdio>, the same way the ALSA output will later own a
-// snd_pcm_t*. Exercise 3 in device/README.md.
+// snd_pcm_t*.
 #pragma once
 
 #include <cstdio>
@@ -38,8 +38,13 @@ public:
     void write(std::span<const float> samples);
 
 private:
-    // TODO(you), exercise 3: the file, plus whatever you need to fill in the
-    // header when you're done.
+    // Closes the file. unique_ptr calls this when it lets go of the FILE*.
+    struct FileCloser {
+        void operator()(std::FILE* f) const { std::fclose(f); }
+    };
+
+    std::unique_ptr<std::FILE, FileCloser> file_;
+    // TODO(you), step 3: count the data bytes written, for the header sizes.
 };
 
 }  // namespace device
