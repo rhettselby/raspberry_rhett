@@ -1,0 +1,43 @@
+{"id": "play-01", "text": "play white noise", "expected": {"command": "play", "args": {"color": "white"}}, "tags": ["basic"]}
+{"id": "play-02", "text": "play pink noise", "expected": {"command": "play", "args": {"color": "pink"}}, "tags": ["basic"]}
+{"id": "play-03", "text": "play brown noise", "expected": {"command": "play", "args": {"color": "brown"}}, "tags": ["basic"]}
+{"id": "play-04", "text": "start the brown noise", "expected": {"command": "play", "args": {"color": "brown"}}, "tags": ["basic"]}
+{"id": "play-05", "text": "can you put on some pink noise", "expected": {"command": "play", "args": {"color": "pink"}}, "tags": ["basic"]}
+{"id": "play-06", "text": "switch to white noise", "expected": {"command": "play", "args": {"color": "white"}}, "tags": ["basic"]}
+{"id": "play-07", "text": "turn on brown noise please", "expected": {"command": "play", "args": {"color": "brown"}}, "tags": ["basic"]}
+{"id": "play-08", "text": "play some noise", "expected": {"command": "play", "args": {}}, "tags": ["basic"]}
+{"id": "play-09", "text": "put on some static", "expected": {"command": "play", "args": {"color": "white"}}, "tags": ["hard"]}
+{"id": "play-10", "text": "I want the deep rumbly one", "expected": {"command": "play", "args": {"color": "brown"}}, "tags": ["hard"]}
+{"id": "stop-01", "text": "stop", "expected": {"command": "stop", "args": {}}, "tags": ["basic"]}
+{"id": "stop-02", "text": "stop the noise", "expected": {"command": "stop", "args": {}}, "tags": ["basic"]}
+{"id": "stop-03", "text": "turn it off", "expected": {"command": "stop", "args": {}}, "tags": ["basic"]}
+{"id": "stop-04", "text": "turn off the white noise", "expected": {"command": "stop", "args": {}}, "tags": ["basic"]}
+{"id": "stop-05", "text": "be quiet", "expected": {"command": "stop", "args": {}}, "tags": ["basic"]}
+{"id": "stop-06", "text": "kill the noise", "expected": {"command": "stop", "args": {}}, "tags": ["hard"]}
+{"id": "stop-07", "text": "that's enough for tonight", "expected": {"command": "stop", "args": {}}, "tags": ["hard"]}
+{"id": "timer-01", "text": "set a sleep timer for 30 minutes", "expected": {"command": "sleep_timer", "args": {"minutes": 30}}, "tags": ["basic"]}
+{"id": "timer-02", "text": "sleep timer 45 minutes", "expected": {"command": "sleep_timer", "args": {"minutes": 45}}, "tags": ["basic"]}
+{"id": "timer-03", "text": "turn off in 20 minutes", "expected": {"command": "sleep_timer", "args": {"minutes": 20}}, "tags": ["basic"]}
+{"id": "timer-04", "text": "stop the noise in an hour", "expected": {"command": "sleep_timer", "args": {"minutes": 60}}, "tags": ["basic"]}
+{"id": "timer-05", "text": "set a sleep timer for twenty five minutes", "expected": {"command": "sleep_timer", "args": {"minutes": 25}}, "tags": ["basic"]}
+{"id": "timer-06", "text": "turn it off after an hour and a half", "expected": {"command": "sleep_timer", "args": {"minutes": 90}}, "tags": ["basic"]}
+{"id": "timer-07", "text": "give me half an hour then shut it off", "expected": {"command": "sleep_timer", "args": {"minutes": 30}}, "tags": ["hard"]}
+{"id": "timer-08", "text": "fade out after 15 minutes", "expected": {"command": "sleep_timer", "args": {"minutes": 15}}, "tags": ["hard"]}
+{"id": "timer-09", "text": "keep it on for 2 hours then stop", "expected": {"command": "sleep_timer", "args": {"minutes": 120}}, "tags": ["hard"]}
+{"id": "alarm-01", "text": "set an alarm for 7 am", "expected": {"command": "set_alarm", "args": {"time": "07:00"}}, "tags": ["basic"]}
+{"id": "alarm-02", "text": "set an alarm for 6:30 am", "expected": {"command": "set_alarm", "args": {"time": "06:30"}}, "tags": ["basic"]}
+{"id": "alarm-03", "text": "wake me up at 7:15", "expected": {"command": "set_alarm", "args": {"time": "07:15"}}, "tags": ["basic"]}
+{"id": "alarm-04", "text": "set alarm for 5:45 a.m.", "expected": {"command": "set_alarm", "args": {"time": "05:45"}}, "tags": ["basic"]}
+{"id": "alarm-05", "text": "wake me at seven thirty", "expected": {"command": "set_alarm", "args": {"time": "07:30"}}, "tags": ["basic"]}
+{"id": "alarm-06", "text": "alarm at 6 o'clock", "expected": {"command": "set_alarm", "args": {"time": "06:00"}}, "tags": ["basic"]}
+{"id": "alarm-07", "text": "set an alarm for 9 pm", "expected": {"command": "set_alarm", "args": {"time": "21:00"}}, "tags": ["basic"]}
+{"id": "alarm-08", "text": "wake me up at six oh five", "expected": {"command": "set_alarm", "args": {"time": "06:05"}}, "tags": ["basic"]}
+{"id": "alarm-09", "text": "I need to be up by quarter to seven", "expected": {"command": "set_alarm", "args": {"time": "06:45"}}, "tags": ["hard"]}
+{"id": "alarm-10", "text": "wake me at half past six", "expected": {"command": "set_alarm", "args": {"time": "06:30"}}, "tags": ["hard"]}
+{"id": "alarm-11", "text": "I have to get up at 6 tomorrow", "expected": {"command": "set_alarm", "args": {"time": "06:00"}}, "tags": ["hard"]}
+{"id": "none-01", "text": "what time is it", "expected": null, "tags": ["negative"]}
+{"id": "none-02", "text": "thank you", "expected": null, "tags": ["negative"]}
+{"id": "none-03", "text": "the brown dog is sleeping", "expected": null, "tags": ["negative"]}
+{"id": "none-04", "text": "set an alarm", "expected": null, "tags": ["negative"]}
+{"id": "none-05", "text": "log a five mile run", "expected": null, "tags": ["negative"]}
+{"id": "none-06", "text": "how did I sleep last night", "expected": null, "tags": ["negative"]}

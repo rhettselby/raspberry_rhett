@@ -5,15 +5,15 @@
 #include <stdexcept>
 #include <string>
 
-// The 44-byte header of a 16-bit PCM WAV file. Every number is little-endian.
+// Little endian 44 byte header
 //
 //   offset  bytes  contents
 //        0      4  "RIFF"
-//        4      4  36 + data size (the file size minus these first 8 bytes)
+//        4      4  36 + data size
 //        8      4  "WAVE"
-//       12      4  "fmt " (with a trailing space)
-//       16      4  16, the size of the rest of this fmt chunk
-//       20      2  1, meaning integer PCM
+//       12      4  "fmt "
+//       16      4  16
+//       20      2  1, integer PCM
 //       22      2  number of channels
 //       24      4  sample rate
 //       28      4  byte rate = sample rate * channels * 2
@@ -23,8 +23,6 @@
 //       40      4  data size in bytes
 //       44         the samples, as int16
 //
-// You don't know the two sizes (offsets 4 and 40) until you stop writing, so
-// write 0 at first and go back to fill them in at the end.
 
 namespace device {
 namespace {

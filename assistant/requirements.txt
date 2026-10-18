@@ -1,0 +1,6 @@
+# Install into the repo's venv: .venv/bin/pip install -r assistant/requirements.txt
+faster-whisper>=1.2  # Whisper speech-to-text on CTranslate2 (int8, CPU)
+av<19                # audio file decoding for faster-whisper; PyAV 19 breaks faster-whisper 1.2.1's decode_audio()
+sounddevice>=0.5     # microphone input via PortAudio (bundled on macOS; on the Pi: sudo apt install libportaudio2)
+numpy>=2
+pytest>=8
